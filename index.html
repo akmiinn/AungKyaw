@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aung Kyaw Min | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #EAEAEA;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        @keyframes twinkle {
+            0%, 100% { 
+                opacity: 0.1; /* Almost off for a subtle effect */
+            }
+            50% { 
+                opacity: 1;   /* Fully bright for a clear 'on' state */
+            }
+        }
+        /* Added for text shimmer effect */
+        @keyframes text-shine-animation {
+            0% { background-position: 200% center; }
+            100% { background-position: -200% center; }
+        }
+        .text-shine {
+            background: linear-gradient(to right, #EAEAEA 20%, #FFFFFF 50%, #EAEAEA 80%);
+            background-size: 200% auto;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: text-shine-animation 4s linear infinite;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "framer-motion": "https://esm.sh/framer-motion@11"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
