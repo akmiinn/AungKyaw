@@ -6,28 +6,28 @@ const projects = [
     {
         title: "BurmaFoodie",
         description: "A conversational AI chatbox deployed as a web application to help users explore Burmese cuisine, providing dish recommendations, ingredient details, and recipes.",
-        image: "/aungkyawmin2.jpg",
+        image: "/burmafoodie.jpg",
         tags: ["Python", "NLP", "Flask", "HTML/CSS"],
         link: "https://www.burmafoodie.site",
     },
     {
         title: "Sign Language Detection System",
         description: "A real-time application that utilizes a machine learning model to recognize and translate sign language gestures into text, facilitating communication between signers and non-signers.",
-        image: "/aungkyawmin.jpg",
+        image: "/signlanguage.jpg",
         tags: ["Python", "TensorFlow", "OpenCV", "React"],
         link: "https://www.figma.com/proto/nNQhZR8XsbvQq85z95Lf9f/SE?node-id=757-3963&viewport=454%2C669%2C0.27&t=DjwGBoRZyc5fpLmB-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=757%3A3963&show-proto-sidebar=1",
     },
     {
         title: "Automatic Agricultural Watering System",
         description: "An IoT-based project that automates crop irrigation using soil moisture sensors to activate a water pump when necessary, promoting water conservation and ensuring optimal plant growth.",
-        image: "/aungkyawmin2.jpg",
+        image: "/wateringsystem.jpg",
         tags: ["Arduino", "C++", "Sensors", "IoT"],
         link: "https://youtu.be/LYY35AYcGJ0?si=GXSKsuJD3hN-ClEX",
     },
     {
         title: "Hybridus Task Manager",
         description: "A full-stack web application designed for effective task and time management. It allows users to organize schedules, track project deadlines, and manage their to-do lists through a clean and intuitive user interface.",
-        image: "/aungkyawmin.jpg",
+        image: "/hybridus.jpg",
         tags: ["React", "Node.js", "MySQL", "HTML/CSS"],
         link: "https://www.hybridus.site",
     }
