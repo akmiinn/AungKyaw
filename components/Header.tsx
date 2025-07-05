@@ -79,7 +79,7 @@ const Header: React.FC = () => {
                                         className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer"
                                     >
                                         {link.label}
-                                    </a >
+                                    </motion.a>
                                 ))}
                             </div>
                         </div>
@@ -122,7 +122,7 @@ const Header: React.FC = () => {
                                         className="text-gray-200 hover:text-white text-3xl font-semibold transition-colors"
                                     >
                                         {link.label}
-                                    </a >
+                                    </a>
                                 ))}
                             </nav>
                         </motion.div>
