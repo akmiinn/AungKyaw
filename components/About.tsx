@@ -17,7 +17,7 @@ const About: React.FC = () => {
                 <div className="flex flex-col md:flex-row items-center gap-12" style={{ transform: "translateZ(25px)"}}>
                     <div className="flex-shrink-0">
                         <motion.img 
-                            src="/public/aungkyawmin.jpg"
+                            src="/aungkyawmin.jpg"
                             alt="Aung Kyaw Min" 
                             loading="lazy"
                             className="rounded-full w-40 h-40 object-cover border-4 border-white/20 shadow-lg transition-all duration-500"
