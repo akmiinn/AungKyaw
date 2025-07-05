@@ -44,7 +44,7 @@ const Background: React.FC = () => {
         <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-[#0d0d0d]">
             {/* Scattered stars layer */}
             <div className="absolute inset-0">
-                <Stars count={250} />
+                <Stars count={500} />
             </div>
 
             {/* Interactive spotlight layer */}
