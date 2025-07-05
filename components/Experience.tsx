@@ -11,7 +11,7 @@ const experiences = [
         description: [
             'Developed hardware model for wave simulation on measuring the coastals erosion measurement.'
         ],
-        image: 'https://www.hrwallingford.com/sites/default/files/styles/1_1_large/public/2021-03/F_UKCRF_Fast-Flow-Facility_006.jpg?itok=fI8fdfhG',
+        image: '/implementation.jpg',
     },
     {
         type: 'Practical Experience',
@@ -21,7 +21,7 @@ const experiences = [
         description: [
             'Data visualization on proposed method wave data to measured data from coastal region.'
         ],
-        image: 'https://pin.it/2onxvnoH9',
+        image: '/datavis.jpg',
     },
     {
         type: 'Research Intern',
@@ -31,7 +31,7 @@ const experiences = [
         description: [
             'Used dataset and divided categories including testing, preprocessing, modeling, training, and validation.'
         ],
-        image: 'https://www.mdpi.com/remotesensing/remotesensing-12-02631/article_deploy/html/images/remotesensing-12-02631-g001.png',
+        image: '/lidar.jpg',
     },
     {
         type: 'Research Assistant',
@@ -42,7 +42,7 @@ const experiences = [
             'Studied and developed algorithms for enhancing, segmenting, and classifying digital images using Python, MATLAB, and machine learning techniques.',
             'Aim: Improve image recognition accuracy.'
         ],
-        image: 'https://miro.medium.com/v2/resize:fit:1400/1*I2k_PoPU2-y0kj5y3o3tNw.png',
+        image: '/imageprocessing.jpg',
     },
     {
         type: 'Research Project',
@@ -53,7 +53,7 @@ const experiences = [
             'Studied characteristics of HE in OCT images.',
             'Developed programs to localize Hemorrhages in OCT images.'
         ],
-        image: 'https://www.researchgate.net/publication/335871271/figure/fig1/AS:804682390888448@1568861273812/Example-of-a-B-scan-with-intraretinal-hemorrhages-A-Color-fundus-photography-of-a.jpg',
+        image: '/rdp.jpg',
     },
 ];
 
