@@ -20,14 +20,14 @@ const projects = [
     {
         title: "Automatic Agricultural Watering System",
         description: "An IoT-based project that automates crop irrigation using soil moisture sensors to activate a water pump when necessary, promoting water conservation and ensuring optimal plant growth.",
-        image: "/wateringsystem.jpg",
+        image: "/aungkyawmin2.jpg",
         tags: ["Arduino", "C++", "Sensors", "IoT"],
         link: "https://youtu.be/LYY35AYcGJ0?si=GXSKsuJD3hN-ClEX",
     },
     {
         title: "Hybridus Task Manager",
         description: "A full-stack web application designed for effective task and time management. It allows users to organize schedules, track project deadlines, and manage their to-do lists through a clean and intuitive user interface.",
-        image: "/taskmanager.png",
+        image: "/aungkyawmin.jpg",
         tags: ["React", "Node.js", "MySQL", "HTML/CSS"],
         link: "https://www.hybridus.site",
     }
