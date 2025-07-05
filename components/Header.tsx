@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 
 const Header: React.FC = () => {
     const [scrolled, setScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const { scrollYProgress } = useScroll();
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001
+    });
 
     useEffect(() => {
         const handleScroll = () => {
@@ -48,7 +55,7 @@ const Header: React.FC = () => {
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 transition={{ type: 'spring', stiffness: 100, damping: 20 }}
-                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-black/30 backdrop-blur-xl shadow-xl border-b border-white/10' : 'bg-transparent'}`}
+                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-black/30 backdrop-blur-xl shadow-xl' : 'bg-transparent'}`}
             >
                 <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-20">
@@ -72,7 +79,7 @@ const Header: React.FC = () => {
                                         className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer"
                                     >
                                         {link.label}
-                                    </motion.a>
+                                    </a >
                                 ))}
                             </div>
                         </div>
@@ -88,6 +95,7 @@ const Header: React.FC = () => {
                         </div>
                     </div>
                 </nav>
+                <motion.div className="h-1 bg-white/80 origin-left" style={{ scaleX }} />
             </motion.header>
 
             <AnimatePresence>
@@ -114,7 +122,7 @@ const Header: React.FC = () => {
                                         className="text-gray-200 hover:text-white text-3xl font-semibold transition-colors"
                                     >
                                         {link.label}
-                                    </a>
+                                    </a >
                                 ))}
                             </nav>
                         </motion.div>
