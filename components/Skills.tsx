@@ -39,8 +39,40 @@ const skills = {
     ],
 };
 
+const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { 
+        opacity: 1, 
+        y: 0,
+        transition: {
+            duration: 0.6,
+            when: "beforeChildren",
+            staggerChildren: 0.1
+        }
+    }
+};
+
+const categoryVariants = {
+    hidden: { opacity: 0, x: -30 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
+};
+
+const gridVariants = {
+    visible: {
+        transition: { staggerChildren: 0.08 }
+    },
+    hidden: {}
+};
+
+const skillItemVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1 }
+};
+
+
 const SkillItem: React.FC<{ name: string; icon: React.ReactNode }> = ({ name, icon }) => (
     <motion.div 
+        variants={skillItemVariants}
         className="flex flex-col items-center justify-center p-4 bg-white/5 rounded-2xl transition-all duration-300 hover:bg-white/10"
         style={{ transformStyle: "preserve-3d" }}
         whileHover={{ scale: 1.1, y: -10, z: 50 }}
@@ -51,46 +83,28 @@ const SkillItem: React.FC<{ name: string; icon: React.ReactNode }> = ({ name, ic
     </motion.div>
 );
 
-const listVariants = {
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.1
-        }
-    },
-    hidden: { opacity: 0 }
-};
-
-const itemVariants = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: 20 }
-}
-
 const Skills: React.FC = () => {
     return (
         <section id="skills" className="py-24">
-            <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+             <motion.div
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.6 }}
             >
                 <GlassCard>
-                    <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-400">My Skills</h2>
+                    <motion.h2 variants={categoryVariants} className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-400">My Skills</motion.h2>
                     <div className="space-y-10">
                         {Object.entries(skills).map(([category, skillList]) => (
-                            <div key={category}>
+                            <motion.div key={category} variants={categoryVariants}>
                                 <h3 className="text-2xl font-semibold mb-6 text-center md:text-left">{category}</h3>
                                 <motion.div 
                                     className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
-                                    variants={listVariants}
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true, amount: 0.2 }}
+                                    variants={gridVariants}
                                 >
-                                    {skillList.map(skill => <motion.div variants={itemVariants} key={skill.name}><SkillItem {...skill} /></motion.div>)}
+                                    {skillList.map(skill => <SkillItem key={skill.name} {...skill} />)}
                                 </motion.div>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </GlassCard>
