@@ -1,4 +1,3 @@
-
 import React from 'react';
 import GlassCard from './common/GlassCard';
 import { motion } from 'framer-motion';
@@ -12,7 +11,7 @@ const experiences = [
         description: [
             'Developed hardware model for wave simulation on measuring the coastals erosion measurement.'
         ],
-        image: 'https://images.unsplash.com/photo-1632516643720-e7f5d7d608e4?q=80&w=800&auto=format=fit=crop',
+        image: 'https://www.hrwallingford.com/sites/default/files/styles/1_1_large/public/2021-03/F_UKCRF_Fast-Flow-Facility_006.jpg?itok=fI8fdfhG',
     },
     {
         type: 'Practical Experience',
@@ -22,7 +21,7 @@ const experiences = [
         description: [
             'Data visualization on proposed method wave data to measured data from coastal region.'
         ],
-        image: 'https://images.unsplash.com/photo-1611974780784-3c6ce35cd7a2?q=80&w=800&auto=format=fit=crop',
+        image: 'https://www.mdpi.com/jmse/jmse-09-00229/article_deploy/html/images/jmse-09-00229-g001.png',
     },
     {
         type: 'Research Intern',
@@ -32,7 +31,7 @@ const experiences = [
         description: [
             'Used dataset and divided categories including testing, preprocessing, modeling, training, and validation.'
         ],
-        image: 'https://images.unsplash.com/photo-1675926790791-62a98f44615a?q=80&w=800&auto=format=fit=crop',
+        image: 'https://www.mdpi.com/remotesensing/remotesensing-12-02631/article_deploy/html/images/remotesensing-12-02631-g001.png',
     },
     {
         type: 'Research Assistant',
@@ -43,7 +42,7 @@ const experiences = [
             'Studied and developed algorithms for enhancing, segmenting, and classifying digital images using Python, MATLAB, and machine learning techniques.',
             'Aim: Improve image recognition accuracy.'
         ],
-        image: 'https://images.unsplash.com/photo-1629196587913-c237ec16551b?q=80&w=800&auto=format=fit=crop',
+        image: 'https://miro.medium.com/v2/resize:fit:1400/1*I2k_PoPU2-y0kj5y3o3tNw.png',
     },
     {
         type: 'Research Project',
@@ -54,7 +53,7 @@ const experiences = [
             'Studied characteristics of HE in OCT images.',
             'Developed programs to localize Hemorrhages in OCT images.'
         ],
-        image: 'https://images.unsplash.com/photo-1605810230434-70824688733a?q=80&w=800&auto=format=fit=crop',
+        image: 'https://www.researchgate.net/publication/335871271/figure/fig1/AS:804682390888448@1568861273812/Example-of-a-B-scan-with-intraretinal-hemorrhages-A-Color-fundus-photography-of-a.jpg',
     },
 ];
 
