@@ -6,7 +6,7 @@ const projects = [
     {
         title: "BurmaFoodie",
         description: "A conversational AI chatbox deployed as a web application to help users explore Burmese cuisine, providing dish recommendations, ingredient details, and recipes.",
-        image: "/burmafoodie.jpg",
+        image: "/aungkyawmin.jpg",
         tags: ["Python", "NLP", "Flask", "HTML/CSS"],
         link: "https://www.burmafoodie.site",
     },
