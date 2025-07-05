@@ -11,7 +11,7 @@ const experiences = [
         description: [
             'Developed hardware model for wave simulation on measuring the coastals erosion measurement.'
         ],
-        image: '/implementation.jpg',
+        image: '/nectec-wave-sim.jpg',
     },
     {
         type: 'Practical Experience',
@@ -21,7 +21,7 @@ const experiences = [
         description: [
             'Data visualization on proposed method wave data to measured data from coastal region.'
         ],
-        image: '/datavis.jpg',
+        image: '/nectec-data-vis.jpg',
     },
     {
         type: 'Research Intern',
@@ -31,7 +31,7 @@ const experiences = [
         description: [
             'Used dataset and divided categories including testing, preprocessing, modeling, training, and validation.'
         ],
-        image: '/lidar.jpg',
+        image: '/lidar-research.jpg',
     },
     {
         type: 'Research Assistant',
@@ -42,7 +42,7 @@ const experiences = [
             'Studied and developed algorithms for enhancing, segmenting, and classifying digital images using Python, MATLAB, and machine learning techniques.',
             'Aim: Improve image recognition accuracy.'
         ],
-        image: '/imageprocessing.jpg',
+        image: '/image-processing-internship.jpg',
     },
     {
         type: 'Research Project',
@@ -53,7 +53,7 @@ const experiences = [
             'Studied characteristics of HE in OCT images.',
             'Developed programs to localize Hemorrhages in OCT images.'
         ],
-        image: '/rdp.jpg',
+        image: '/oct-hemorrhage.jpg',
     },
 ];
 
@@ -73,10 +73,10 @@ const Experience: React.FC = () => {
                 {experiences.map((exp, index) => (
                     <motion.div
                         key={index}
-                        initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                        initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.8, type: 'spring', stiffness: 50 }}
                     >
                         <GlassCard className={`bg-white/[.06]`}>
                            <div className={`flex flex-col md:flex-row items-center gap-8 md:gap-12 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
