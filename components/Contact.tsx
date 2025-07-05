@@ -1,4 +1,3 @@
-
 import React from 'react';
 import GlassCard from './common/GlassCard';
 import { motion } from 'framer-motion';
@@ -57,7 +56,7 @@ const Contact: React.FC = () => {
                 <p>&copy; {new Date().getFullYear()} Aung Kyaw Min. All Rights Reserved.</p>
                 <p className="text-sm">Built with React, Framer Motion & Tailwind CSS.</p>
             </footer>
-        </section>
+        </motion.section>
     );
 };
 
