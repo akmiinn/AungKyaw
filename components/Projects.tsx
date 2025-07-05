@@ -6,28 +6,28 @@ const projects = [
     {
         title: "BurmaFoodie",
         description: "A conversational AI chatbox deployed as a web application to help users explore Burmese cuisine, providing dish recommendations, ingredient details, and recipes.",
-        image: "/burmafoodie.jpg",
+        image: "/burma-foodie.jpg",
         tags: ["Python", "NLP", "Flask", "HTML/CSS"],
         link: "https://www.burmafoodie.site",
     },
     {
         title: "Sign Language Detection System",
         description: "A real-time application that utilizes a machine learning model to recognize and translate sign language gestures into text, facilitating communication between signers and non-signers.",
-        image: "/signlanguage.jpg",
+        image: "/sign-language.jpg",
         tags: ["Python", "TensorFlow", "OpenCV", "React"],
         link: "https://www.figma.com/proto/nNQhZR8XsbvQq85z95Lf9f/SE?node-id=757-3963&viewport=454%2C669%2C0.27&t=DjwGBoRZyc5fpLmB-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=757%3A3963&show-proto-sidebar=1",
     },
     {
         title: "Automatic Agricultural Watering System",
         description: "An IoT-based project that automates crop irrigation using soil moisture sensors to activate a water pump when necessary, promoting water conservation and ensuring optimal plant growth.",
-        image: "/wateringsystem.jpg",
+        image: "/watering-system.jpg",
         tags: ["Arduino", "C++", "Sensors", "IoT"],
         link: "https://youtu.be/LYY35AYcGJ0?si=GXSKsuJD3hN-ClEX",
     },
     {
         title: "Hybridus Task Manager",
         description: "A full-stack web application designed for effective task and time management. It allows users to organize schedules, track project deadlines, and manage their to-do lists through a clean and intuitive user interface.",
-        image: "/taskmanager.jpg",
+        image: "/task-manager.jpg",
         tags: ["React", "Node.js", "MySQL", "HTML/CSS"],
         link: "https://www.hybridus.site",
     }
@@ -45,17 +45,23 @@ const containerVariants: Variants = {
 
 const itemVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 }
+    visible: { 
+        opacity: 1, 
+        y: 0,
+        transition: {
+            type: 'spring',
+            stiffness: 100,
+        }
+    }
 };
 
 const ProjectCard: React.FC<typeof projects[0]> = ({ title, description, image, tags, link }) => {
     return (
         <motion.div 
             className="h-full"
-            whileHover={{ scale: 1.05, y: -10 }}
-            transition={{ type: 'spring', stiffness: 200, damping: 15 }}
+            variants={itemVariants}
         >
-            <GlassCard className="h-full">
+             <GlassCard className="h-full">
                 <div className="flex flex-col h-full">
                     <div className="relative w-full h-48 mb-4 rounded-xl overflow-hidden">
                         <img src={image} alt={title} loading="lazy" className="w-full h-full object-cover" />
@@ -98,12 +104,10 @@ const Projects: React.FC = () => {
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.1 }}
+                viewport={{ once: true, amount: 0.2 }}
             >
                 {projects.map((project, index) => (
-                    <motion.div key={index} variants={itemVariants}>
-                        <ProjectCard {...project} />
-                    </motion.div>
+                    <ProjectCard key={index} {...project} />
                 ))}
             </motion.div>
         </section>
