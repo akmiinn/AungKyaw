@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Header: React.FC = () => {
     const [scrolled, setScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    const { scrollYProgress } = useScroll();
-    const scaleX = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 30,
-        restDelta: 0.001
-    });
 
     useEffect(() => {
         const handleScroll = () => {
@@ -49,13 +42,39 @@ const Header: React.FC = () => {
         { href: '#contact', label: 'Contact' },
     ];
 
+    const mobileMenuVariants = {
+        open: {
+            transition: { staggerChildren: 0.07, delayChildren: 0.2 }
+        },
+        closed: {
+            transition: { staggerChildren: 0.05, staggerDirection: -1 }
+        }
+    };
+
+    const mobileLinkVariants = {
+        open: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                y: { stiffness: 1000, velocity: -100 }
+            }
+        },
+        closed: {
+            y: 50,
+            opacity: 0,
+            transition: {
+                y: { stiffness: 1000 }
+            }
+        }
+    };
+
     return (
         <>
             <motion.header 
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 transition={{ type: 'spring', stiffness: 100, damping: 20 }}
-                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-black/30 backdrop-blur-xl shadow-xl' : 'bg-transparent'}`}
+                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-black/30 backdrop-blur-xl shadow-xl border-b border-white/10' : 'bg-transparent'}`}
             >
                 <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-20">
@@ -95,7 +114,6 @@ const Header: React.FC = () => {
                         </div>
                     </div>
                 </nav>
-                <motion.div className="h-1 bg-white/80 origin-left" style={{ scaleX }} />
             </motion.header>
 
             <AnimatePresence>
@@ -113,18 +131,25 @@ const Header: React.FC = () => {
                             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                             className="fixed top-0 right-0 h-full w-full max-w-xs bg-[#111111]/80 shadow-2xl"
                         >
-                            <nav className="flex flex-col items-center justify-center h-full space-y-8">
+                            <motion.nav
+                                variants={mobileMenuVariants}
+                                initial="closed"
+                                animate="open"
+                                exit="closed"
+                                className="flex flex-col items-center justify-center h-full space-y-8"
+                            >
                                 {navLinks.map((link) => (
-                                    <a 
+                                    <motion.a 
                                         key={link.href} 
                                         href={link.href} 
                                         onClick={(e) => handleNavClick(e, link.href)}
+                                        variants={mobileLinkVariants}
                                         className="text-gray-200 hover:text-white text-3xl font-semibold transition-colors"
                                     >
                                         {link.label}
-                                    </a>
+                                    </motion.a>
                                 ))}
-                            </nav>
+                            </motion.nav>
                         </motion.div>
                     </motion.div>
                 )}
