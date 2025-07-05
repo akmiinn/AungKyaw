@@ -27,7 +27,7 @@ const projects = [
     {
         title: "Hybridus Task Manager",
         description: "A full-stack web application designed for effective task and time management. It allows users to organize schedules, track project deadlines, and manage their to-do lists through a clean and intuitive user interface.",
-        image: "/taskmanager.jpg",
+        image: "/taskmanager.png",
         tags: ["React", "Node.js", "MySQL", "HTML/CSS"],
         link: "https://www.hybridus.site",
     }
