@@ -21,7 +21,7 @@ const experiences = [
         description: [
             'Data visualization on proposed method wave data to measured data from coastal region.'
         ],
-        image: 'https://www.mdpi.com/jmse/jmse-09-00229/article_deploy/html/images/jmse-09-00229-g001.png',
+        image: 'https://pin.it/2onxvnoH9',
     },
     {
         type: 'Research Intern',
