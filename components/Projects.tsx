@@ -12,9 +12,9 @@ const projects = [
     },
     {
         title: "Sign Language Detection System",
-        description: "A real-time application that utilizes a machine learning model to recognize and translate sign language gestures into text, facilitating communication between signers and non-signers.",
+        description: "Project for Software Development on Sign Language regarding users' experience, quality assurance, test cases, users' interaction to the system with full Software Design Specs and Software Requirements Specs",
         image: "/signlanguage.jpg",
-        tags: ["Python", "TensorFlow", "OpenCV", "React"],
+        tags: ["Deployment Diagram", "Sequence Diagram", "Interaction Diagram", "UI", "Figma", "Canva", "UX"],
         link: "https://www.figma.com/proto/nNQhZR8XsbvQq85z95Lf9f/SE?node-id=757-3963&viewport=454%2C669%2C0.27&t=DjwGBoRZyc5fpLmB-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=757%3A3963&show-proto-sidebar=1",
     },
     {
