@@ -10,6 +10,14 @@ const projects = [
         tags: ["Python", "NLP", "Flask", "HTML/CSS"],
         link: "https://www.burmafoodie.site",
     },
+
+    {
+        title: "Coastal Monitoring @ NECTEC",
+        description: "Develop website with to display the data from converting the water level raw data to wave height extraction by applying the algorithms to transform.",
+        image: "/monitor.jpg",
+        tags: ["HTML", "Java", "Python", "MATLAB"],
+        link: "https://coastal-monitoring.pannita.com/sea-level/494b7713-e635-4317-b0ef-739af0811266",
+    },
     {
         title: "Sign Language Detection System",
         description: "Project for Software Development on Sign Language regarding users' experience, quality assurance, test cases, users' interaction to the system with full Software Design Specs and Software Requirements Specs",
