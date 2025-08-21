@@ -12,6 +12,7 @@ const experiences = [
             'Develop software for the interface between PLC and Hydraulic machine for web controller, including designing the hardware components, desiging the HMI for display over wired/wireless connection.'
         ],
         image: '/ctrlX.jpg',
+        link: 'https://www.bosch.com',
     },
     {
         type: 'Practical Experience',
@@ -22,8 +23,8 @@ const experiences = [
             'Data visualization on proposed method wave data to measured data from coastal region.'
         ],
         image: '/datavis.jpg',
+        link: 'https://www.nectec.or.th',
     },
-
     {
         type: 'Practical Experience',
         title: 'Implementation Intern',
@@ -33,8 +34,8 @@ const experiences = [
             'Developed hardware model for wave simulation on measuring the coastals erosion measurement.'
         ],
         image: '/implementation.jpg',
+        link: 'https://www.nectec.or.th',
     },
-
     {
         type: 'Research Intern',
         title: 'Adaptive Sampling Proposed Method Based on Spectral Analysis for Coastal Erosion Monitoring System in Real Time conference paper',
@@ -44,8 +45,8 @@ const experiences = [
             'Real time simulation of sinusodal wavelet on comparison analysis with fixed sampling water level rate and developing the adaptive sampling of the controller depending on the wave height.'
         ],
         image: '/coastal.jpg',
+        link: 'https://www.nectec.or.th',
     },
-    
     {
         type: 'Research Intern',
         title: 'Brainwave-Based Prediction and Personalized Insights',
@@ -103,16 +104,10 @@ const Experience: React.FC = () => {
                 Experience
             </motion.h2>
             <div className="space-y-12">
-                {experiences.map((exp, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        <GlassCard className={`bg-white/[.06]`}>
-                           <div className={`flex flex-col md:flex-row items-center gap-8 md:gap-12 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
+                {experiences.map((exp, index) => {
+                    const cardContent = (
+                        <GlassCard className={`bg-white/[.06] hover:bg-white/[.1] transition cursor-pointer`}>
+                            <div className={`flex flex-col md:flex-row items-center gap-8 md:gap-12 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
                                 <div className="md:w-1/3 w-full flex-shrink-0">
                                     <img src={exp.image} alt={exp.title} loading="lazy" className="rounded-2xl w-full h-56 object-cover" />
                                 </div>
@@ -126,10 +121,28 @@ const Experience: React.FC = () => {
                                         ))}
                                     </ul>
                                 </div>
-                           </div>
+                            </div>
                         </GlassCard>
-                    </motion.div>
-                ))}
+                    );
+
+                    return (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            {exp.link ? (
+                                <a href={exp.link} target="_blank" rel="noopener noreferrer" className="block">
+                                    {cardContent}
+                                </a>
+                            ) : (
+                                cardContent
+                            )}
+                        </motion.div>
+                    );
+                })}
             </div>
         </section>
     );
