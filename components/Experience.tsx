@@ -5,23 +5,56 @@ import { motion } from 'framer-motion';
 const experiences = [
     {
         type: 'Practical Experience',
-        title: 'Implementation Intern',
-        company: 'NECTEC',
-        duration: 'May 2025 - Present',
+        title: 'Service Application Engineer Intern',
+        company: 'Bosch rexroth',
+        duration: 'Aug 2025 - Present',
         description: [
-            'Developed hardware model for wave simulation on measuring the coastals erosion measurement.'
+            'Develop software for the interface between PLC and Hydraulic machine for web controller, including designing the hardware components, desiging the HMI for display over wired/wireless connection.'
         ],
-        image: '/implementation.jpg',
+        image: '/ctrlX.jpg',
     },
     {
         type: 'Practical Experience',
         title: 'Data Analytics Intern',
         company: 'NECTEC',
-        duration: 'May 2025 - Jul 2025',
+        duration: 'Jul 2025 - Present',
         description: [
             'Data visualization on proposed method wave data to measured data from coastal region.'
         ],
         image: '/datavis.jpg',
+    },
+
+    {
+        type: 'Practical Experience',
+        title: 'Implementation Intern',
+        company: 'NECTEC',
+        duration: 'May 2025 - Jul 2025',
+        description: [
+            'Developed hardware model for wave simulation on measuring the coastals erosion measurement.'
+        ],
+        image: '/implementation.jpg',
+    },
+
+    {
+        type: 'Research Intern',
+        title: 'Adaptive Sampling Proposed Method Based on Spectral Analysis for Coastal Erosion Monitoring System in Real Time conference paper',
+        company: 'NECTEC',
+        duration: 'Jul 2025 - Present',
+        description: [
+            'Real time simulation of sinusodal wavelet on comparison analysis with fixed sampling water level rate and developing the adaptive sampling of the controller depending on the wave height.'
+        ],
+        image: '/coastal.jpg',
+    },
+    
+    {
+        type: 'Research Intern',
+        title: 'Brainwave-Based Prediction and Personalized Insights',
+        company: 'SIIT',
+        duration: 'Aug 2025 - Present',
+        description: [
+            'State Classification of visualizing the brainwave with personalized insights with model training and analyzing.'
+        ],
+        image: '/brain.jpg',
     },
     {
         type: 'Research Intern',
