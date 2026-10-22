@@ -52,14 +52,14 @@ const Hero: React.FC = () => {
                     className="mt-4 text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-3xl mx-auto"
                     style={{ transform: 'translateZ(60px)' }}
                 >
-                    Senior Computer Engineering & Health Science Student
+                    Master's Student in Computer Engineering | AI Automation Executive
                 </motion.p>
                 <motion.p 
                     variants={simpleItemVariants}
                     className="mt-2 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto"
                     style={{ transform: 'translateZ(40px)' }}
                 >
-                    AI, ML, UX/UI, QA, Computer Hardware Enthusiastic
+                    Cybersecurity & Binary Instrumentation | Machine Learning | Signal Processing
                 </motion.p>
                 <motion.div variants={simpleItemVariants} style={{ transform: 'translateZ(30px)' }}>
                     <motion.a
@@ -68,19 +68,4 @@ const Hero: React.FC = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="
-                            mt-12 inline-block px-8 py-4 rounded-full text-white text-base font-medium transition-all duration-300
-                            bg-white/5 backdrop-blur-lg border border-white/10
-                            shadow-[0_40px_80px_-20px_rgba(0,0,0,0.6),_inset_0_3px_5px_rgba(255,255,255,0.08),_inset_0_-4px_8px_rgba(0,0,0,0.8)]
-                            hover:border-white/30 hover:shadow-[0_50px_100px_-25px_rgba(0,0,0,0.8),_inset_0_3px_5px_rgba(255,255,255,0.1),_inset_0_-4px_8px_rgba(0,0,0,0.8)]
-                            cursor-pointer
-                        "
-                    >
-                        View My Work
-                    </motion.a>
-                </motion.div>
-            </div>
-        </motion.section>
-    );
-};
-
-export default Hero;
+                            mt-12 inline-block
