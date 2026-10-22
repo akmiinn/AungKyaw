@@ -68,4 +68,19 @@ const Hero: React.FC = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="
-                            mt-12 inline-block
+                            mt-12 inline-block px-8 py-4 rounded-full text-white text-base font-medium transition-all duration-300
+                            bg-white/5 backdrop-blur-lg border border-white/10
+                            shadow-[0_40px_80px_-20px_rgba(0,0,0,0.6),_inset_0_3px_5px_rgba(255,255,255,0.08),_inset_0_-4px_8px_rgba(0,0,0,0.8)]
+                            hover:border-white/30 hover:shadow-[0_50px_100px_-25px_rgba(0,0,0,0.8),_inset_0_3px_5px_rgba(255,255,255,0.1),_inset_0_-4px_8px_rgba(0,0,0,0.8)]
+                            cursor-pointer
+                        "
+                    >
+                        View My Work
+                    </motion.a>
+                </motion.div>
+            </div>
+        </motion.section>
+    );
+};
+
+export default Hero;
