@@ -56,7 +56,7 @@ const experiences = [
             'Static frequency analysis across a 340-sample MalwareBazaar malware corpus against 102 benign administration scripts, making watched-API selection and noise filtering data-driven.',
             'Ongoing survey of anti-analysis and evasion techniques used by fileless threats.'
         ],
-        image: '/pintool.jpg',
+        image: '/pintoo.jpg',
     },
     {
         type: 'Research & Publication',
@@ -154,4 +154,23 @@ const Experience: React.FC = () => {
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                            whileInView={{
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            {exp.link ? (
+                                <a href={exp.link} target="_blank" rel="noopener noreferrer" className="block">
+                                    {cardContent}
+                                </a>
+                            ) : (
+                                cardContent
+                            )}
+                        </motion.div>
+                    );
+                })}
+            </div>
+        </section>
+    );
+};
+
+export default Experience;
