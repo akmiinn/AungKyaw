@@ -4,88 +4,113 @@ import { motion } from 'framer-motion';
 
 const experiences = [
     {
-        type: 'Practical Experience',
-        title: 'Service Application Engineer Intern',
-        company: 'Bosch rexroth',
-        duration: 'Aug 2025 - Present',
+        type: 'Professional Experience',
+        title: 'AI Automation Executive',
+        company: 'FUNNOW Group',
+        duration: 'Aug 2026 - Present',
         description: [
-            'Develop software for the interface between PLC and Hydraulic machine for web controller, including designing the hardware components, desiging the HMI for display over wired/wireless connection.'
+            'Full-time role following internship conversion. Building internal workplace AI implementations with n8n and integrating them across departments.'
+        ],
+        image: '/funnow.jpg',
+    },
+    {
+        type: 'Professional Experience',
+        title: 'AI Automation Executive Intern',
+        company: 'FUNNOW Group',
+        duration: 'Jan 2026 - Jul 2026',
+        description: [
+            'Prototyped n8n automation workflows for internal teams, including a Slack-based recruitment approval bot.'
+        ],
+        image: '/funnow.jpg',
+    },
+    {
+        type: 'Professional Experience',
+        title: 'Service Application Engineer Intern',
+        company: 'Bosch Rexroth',
+        duration: 'Aug 2025 - Nov 2025',
+        description: [
+            'Developed the software interface between PLC and hydraulic machinery for a web controller, including hardware component design and HMI design for display over wired/wireless connection.'
         ],
         image: '/ctrlX.jpg',
         link: 'https://www.bosch.com',
     },
     {
-        type: 'Practical Experience',
-        title: 'Data Analytics Intern',
+        type: 'Professional Experience',
+        title: 'Data Analytics and Implementation Intern',
         company: 'NECTEC',
-        duration: 'Jul 2025 - Present',
+        duration: 'May 2025 - Present',
         description: [
-            'Data visualization on proposed method wave data to measured data from coastal region.'
+            'Data visualisation comparing proposed-method wave data against measured data from the coastal region.',
+            'Developed a hardware model for wave simulation to measure coastal erosion.'
         ],
         image: '/datavis.jpg',
         link: 'https://www.nectec.or.th',
     },
     {
-        type: 'Practical Experience',
-        title: 'Implementation Intern',
-        company: 'NECTEC',
-        duration: 'May 2025 - Jul 2025',
+        type: 'Research & Publication',
+        title: "Master's Thesis - Fileless Malware Detection via Intel Pin DBI",
+        company: 'SIIT, Thammasat University',
+        duration: '2026 - Present',
         description: [
-            'Developed hardware model for wave simulation on measuring the coastals erosion measurement.'
+            'Developing a C++ Intel Pin dynamic binary instrumentation tool that instruments powershell.exe and correlates runtime API behaviour with Sysmon telemetry to detect fileless execution.',
+            'Static frequency analysis across a 340-sample MalwareBazaar malware corpus against 102 benign administration scripts, making watched-API selection and noise filtering data-driven.',
+            'Ongoing survey of anti-analysis and evasion techniques used by fileless threats.'
         ],
-        image: '/implementation.jpg',
-        link: 'https://www.nectec.or.th',
+        image: '/pintool.jpg',
     },
     {
-        type: 'Research Intern',
-        title: 'Adaptive Sampling Proposed Method Based on Spectral Analysis for Coastal Erosion Monitoring System in Real Time conference paper',
-        company: 'NECTEC',
-        duration: 'Jul 2025 - Present',
+        type: 'Research & Publication',
+        title: 'Interpretable AI for Meditation Experience Classification (EEG)',
+        company: 'IIAI-AAI 2026 | Published',
+        duration: 'Aug 2025 - Jul 2026',
         description: [
-            'Real time simulation of sinusodal wavelet on comparison analysis with fixed sampling water level rate and developing the adaptive sampling of the controller depending on the wave height.'
-        ],
-        image: '/coastal.jpg',
-        link: 'https://www.nectec.or.th',
-    },
-    {
-        type: 'Research Intern',
-        title: 'Brainwave-Based Prediction and Personalized Insights',
-        company: 'SIIT',
-        duration: 'Aug 2025 - Present',
-        description: [
-            'State Classification of visualizing the brainwave with personalized insights with model training and analyzing.'
+            'Brainwave-based prediction using EEG and ensemble learning with subject-independent validation.',
+            'Cross-device state classification with feature engineering, signal processing, model training and personalised insight visualisation.'
         ],
         image: '/brain.jpg',
+        link: 'https://ieeexplore.ieee.org/document/11685083',
     },
     {
-        type: 'Research Intern',
+        type: 'Research & Publication',
+        title: 'Adaptive Sampling Based on Spectral Analysis for Real-Time Coastal Erosion Monitoring',
+        company: 'iSAI-NLP 2025 | Published',
+        duration: 'Jul 2025 - Dec 2025',
+        description: [
+            'Real-time simulation of sinusoidal wavelets in comparison analysis against a fixed water-level sampling rate.',
+            'Developed adaptive controller sampling driven by wave height.'
+        ],
+        image: '/coastal.jpg',
+        link: 'https://ieeexplore.ieee.org/document/11320703',
+    },
+    {
+        type: 'Research Experience',
         title: 'Object Detection and Classification Using LiDAR',
         company: 'Mobile Mapping Research',
         duration: 'May 2024 - Jan 2025',
         description: [
-            'Used dataset and divided categories including testing, preprocessing, modeling, training, and validation.'
+            'Dataset preparation and pipeline stages: preprocessing, modelling, training, validation and testing.'
         ],
         image: '/lidar.jpg',
     },
     {
-        type: 'Research Assistant',
-        title: 'Image Processing Internship',
-        company: 'Moments for Image Processing',
+        type: 'Research Experience',
+        title: 'Moments for Image Processing - Research Assistant',
+        company: 'SIIT, Thammasat University',
         duration: 'May 2024 - Feb 2025',
         description: [
-            'Studied and developed algorithms for enhancing, segmenting, and classifying digital images using Python, MATLAB, and machine learning techniques.',
-            'Aim: Improve image recognition accuracy.'
+            'Developed algorithms for enhancing, segmenting and classifying digital images using Python, MATLAB and machine learning techniques.',
+            'Aim: improve image recognition accuracy.'
         ],
         image: '/imageprocessing.jpg',
     },
     {
-        type: 'Research Project',
-        title: 'Automatic Hemorrhage (HE) Localization in OCT Images',
+        type: 'Research Experience',
+        title: 'Automatic Hemorrhage (HE) Localisation in OCT Images',
         company: 'RPD 2024',
-        duration: 'May 2024 - Present',
+        duration: 'May 2024 - Jan 2025',
         description: [
-            'Studied characteristics of HE in OCT images.',
-            'Developed programs to localize Hemorrhages in OCT images.'
+            'Studied characteristics of hemorrhages in OCT images.',
+            'Developed programs to localise hemorrhages in OCT images.'
         ],
         image: '/rdp.jpg',
     },
@@ -129,23 +154,4 @@ const Experience: React.FC = () => {
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            {exp.link ? (
-                                <a href={exp.link} target="_blank" rel="noopener noreferrer" className="block">
-                                    {cardContent}
-                                </a>
-                            ) : (
-                                cardContent
-                            )}
-                        </motion.div>
-                    );
-                })}
-            </div>
-        </section>
-    );
-};
-
-export default Experience;
+                            whileInView={{
